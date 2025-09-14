@@ -27,10 +27,7 @@
       contain-intrinsic-size: 3000px 1500px
     }
   </style>
-  <link rel="alternate" href="ru/index.html" hreflang="ru-ua" />
   <link rel="alternate" href="index.html" hreflang="uk-ua" />
-  <link rel="alternate" href="de/index.html" hreflang="de-ua" />
-  <link rel="alternate" href="en/index.html" hreflang="en-ua" />
 
   <!-- Пошукова оптимізація (SEO) з Rank Math PRO - https://rankmath.com/ -->
   <title>Курси німецької мови для роботи та навчання в Німеччині - Aura</title>
@@ -599,7 +596,7 @@
           <div class="top__logo logo">
             <div class="logo__img">
               <img class="nolazy"
-                src="https://aura-school.com/wp-content/webp-express/webp-images/uploads/2022/12/logo.png.webp"
+                src="images/logo.jpg"
                 width="120" height="120" alt="" />
             </div>
             <span class="logo__slogan">
@@ -749,14 +746,14 @@
 
             </div>
 
-            <div class="top__lang lang">
+            <!-- <div class="top__lang lang">
               <select onchange="location = this.value;" class="pll-switcher-select">
                 <option value="https://aura-school.com/ru/" lang="ru-RU">RU</option>
                 <option value="" lang="uk" selected="selected">UA</option>
                 <option value="https://aura-school.com/de/" lang="de-DE">DE</option>
                 <option value="https://aura-school.com/en/" lang="en-GB">EN</option>
               </select>
-            </div>
+            </div> -->
 
             <div class="top__social social">
 
@@ -783,14 +780,14 @@
             </div>
           </div>
 
-          <div class="top__lang lang tablet">
+          <!-- <div class="top__lang lang tablet">
             <select onchange="location = this.value;" class="pll-switcher-select">
               <option value="https://aura-school.com/ru/" lang="ru-RU">RU</option>
               <option value="https://aura-school.com/" lang="uk" selected="selected">UA</option>
               <option value="https://aura-school.com/de/" lang="de-DE">DE</option>
               <option value="https://aura-school.com/en/" lang="en-GB">EN</option>
             </select>
-          </div>
+          </div> -->
 
 
           <div class="top__social social soc-mobile">
@@ -841,7 +838,7 @@
               <h1 class="banner__title">Онлайн-курси німецької мови для життя, роботи і навчання в Німеччині</h1>
               <p class="banner__subtitle">Навчайся легко і ефективно — запишись на<br> безкоштовний пробний урок.
               </p>
-              <a class="link-red pulse" data-toggle="modal" data-target="#formModal" href="index.html#"
+              <a class="link-red pulse" href="#" onclick="openTrialModal(); return false;"
                 target="_self">Записатися на безкоштовний пробний урок<span classs="link__arrow">
                   <svg width="12" height="11">
                     <use xlink:href="#arrow-white"></use>
@@ -903,7 +900,7 @@
             </div>
 
             <div class="banner__img hero-logo">
-              <img class="nolazy"
+              <img class="nolazy" style="width: 85%;"
                 src="images/logo.jpg" alt="" />
             </div>
 
@@ -958,7 +955,7 @@
         <div class="container">
           <div class="section__meta">
             <p class="title">Чому обирають Chaika Education</p>
-            <p class="subtitle">Розширюйте власні горизонти разом з "Аурою"</p>
+            <!-- <p class="subtitle">Розширюйте власні горизонти разом з "Аурою"</p> -->
           </div>
 
           <div class="slider slider--full slider--margin">
@@ -1250,8 +1247,8 @@
                   </div>
                   <p class="item__title"><span>🎬 Телеграм-канал із фільмами</span></p>
                   <p class="item__desc">Вивчай німецьку через кіно з поясненнями.</p>
-                  <a class="link-default" href="https://chaikaonline.sitepulse.com.ua/filmsclub?fbclid=PAdGRleAMtVa9leHRuA2FlbQIxMQABp3TcDqk--uPpdZyYGasX9FK34eNvwrdNBIXpDovvY-OKeJ_10MfWCYwyAP2y_aem_aJsWEyPPcEU2nB6XGVRxNw" target="_blank">
-                    Підписатися <svg width="10" height="9">
+                  <a class="link-default" href="#" onclick="openCourseModal('🎬 Телеграм-канал із фільмами'); return false;">
+                    Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
                   </a>
@@ -1267,7 +1264,7 @@
                   </div>
                   <p class="item__title"><span>🔑 Закритий клуб за підпискою</span></p>
                   <p class="item__desc">Ексклюзивні матеріали, вправи й підтримка спільноти.</p>
-                  <a class="link-default" href="index.html#" target="_self">
+                  <a class="link-default" href="#" onclick="openCourseModal('🔑 Закритий клуб за підпискою'); return false;">
                     Приєднатися <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1325,7 +1322,7 @@
                   <p><span class="place-num">2</span></p>
                 </div>
                 <div class="group__link">
-                  <button data-toggle="modal" data-target="#formModal">
+                  <button onclick="openTrialModal()">
                     Записатися в передсписок <span>
                       <img
                         src="https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/img/group/arrow-white.svg"
@@ -1358,7 +1355,7 @@
                   <span><span class="place-num">4</span></span>
                 </div>
                 <div class="group__link">
-                  <button data-toggle="modal" data-target="#formModal">
+                  <button onclick="openTrialModal()">
                     Записатися в передсписок <span>
                       <img
                         src="https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/img/group/arrow-white.svg"
@@ -1397,7 +1394,7 @@
                   <span><span class="place-num">-</span></span>
                 </div>
                 <div class="group__link">
-                  <button data-toggle="modal" data-target="#formModal">
+                  <button onclick="openTrialModal()">
                     Записатися в передсписок <span>
                       <img
                         src="https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/img/group/arrow-white.svg"
@@ -1428,7 +1425,7 @@
                   <p><span class="place-num">3</span></p>
                 </div>
                 <div class="group__link">
-                  <button data-toggle="modal" data-target="#formModal">
+                  <button onclick="openTrialModal()">
                     Записатися в передсписок <span>
                       <img
                         src="https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/img/group/arrow-white.svg"
@@ -1476,7 +1473,7 @@
               </div>
 
               <div class="group__link">
-                <button data-toggle="modal" data-target="#formModal">
+                <button onclick="openTrialModal()">
                   Записатися в передсписок <span>
                     <img
                       src="https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/img/group/arrow-white.svg"
@@ -1519,7 +1516,7 @@
               </div>
 
               <div class="group__link">
-                <button data-toggle="modal" data-target="#formModal">
+                <button onclick="openTrialModal()">
                   Записатися в передсписок <span>
                     <img
                       src="https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/img/group/arrow-white.svg"
@@ -1566,7 +1563,7 @@
               </div>
 
               <div class="group__link">
-                <button data-toggle="modal" data-target="#formModal">
+                <button onclick="openTrialModal()">
                   Записатися в передсписок <span>
                     <img
                       src="https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/img/group/arrow-white.svg"
@@ -1607,7 +1604,7 @@
               </div>
 
               <div class="group__link">
-                <button data-toggle="modal" data-target="#formModal">
+                <button onclick="openTrialModal()">
                   Записатися в передсписок <span>
                     <img
                       src="https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/img/group/arrow-white.svg"
@@ -1994,7 +1991,7 @@
             <div class="guarantee__cta">
               <div class="guarantee__cta-content">
                 <p class="guarantee__cta-text">👉 <strong>Ви нічим не ризикуєте:</strong> або отримуєте результат, або гроші назад.</p>
-                <button class="link-red pulse" data-toggle="modal" data-target="#formModal">
+                <button class="link-red pulse" onclick="openTrialModal()">
                   Записатися на курс
                   <span class="link__arrow">
                     <svg width="12" height="11">
@@ -2260,7 +2257,7 @@
 
 
               <p class="offer__desc subtitle">Переконайтесь, що німецька з «Аурою» – <span>це легко</span></p>
-              <a class="link-red pulse" data-toggle="modal" data-target="#formModal" href="index.html#"
+              <a class="link-red pulse" href="#" onclick="openTrialModal(); return false;"
                 target="_self">Записатися <span classs="link__arrow">
                   <svg width="12" height="11">
                     <use xlink:href="#arrow-white"></use>
@@ -2645,7 +2642,8 @@
                 <div class="logo">
                   <div class="logo__img">
                     <img class="lazy"
-                      data-src="https://aura-school.com/wp-content/webp-express/webp-images/uploads/2022/12/logo.png.webp"
+                      src="images/logo.jpg"
+                      data-src="images/logo.jpg"
                       width="120" height="120" alt="" />
                   </div>
                   <span class="logo__slogan">
@@ -2742,10 +2740,7 @@
               <div class="contract">
                 <a href="dogovir-oferty/index.html" target="_self">Договір оферти</a>
               </div>
-              <a href="https://www.dmca.com/Protection/Status.aspx?ID=46901431-d24e-4ad4-87c9-ffc530a879f9"
-                title="DMCA.com Protection Status" class="dmca-badge"> <img
-                  src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-11.png?ID=46901431-d24e-4ad4-87c9-ffc530a879f9"
-                  alt="DMCA.com Protection Status" width="100" height="20" /></a>
+             
               <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
 
 
@@ -2757,7 +2752,7 @@
 
                 </div>
               </div>
-              <div class="copy">2019 - 2025 © aura-school.com</div>
+              <!-- <div class="copy">2019 - 2025 © aura-school.com</div> -->
             </div>
             <div class="footer__social social">
 
@@ -3008,94 +3003,47 @@
     </symbol>
   </svg>
 
-  <!-- Modal MAIN -->
-  <div class="modal fade modal--call" id="formModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <svg width="10" height="10">
-              <use xlink:href="#close"></use>
-            </svg>
-          </button>
+  <!-- Trial Lesson Modal -->
+  <div id="trialModal" class="trial-modal">
+    <div class="trial-modal-content">
+      <button class="trial-modal-close" onclick="closeTrialModal()">&times;</button>
+      
+      <h2 class="trial-modal-title">Записатись<br />на пробний<br />урок</h2>
+      
+      <form id="trialForm" class="trial-form">
+        <div class="trial-form-group">
+          <input type="text" id="trialName" class="trial-input" placeholder="Ім'я" required>
         </div>
-        <div class="modal-body">
-
-
-
-          <div>
-            <div class="screen-reader-response">
-              <p role="status" aria-live="polite" aria-atomic="true"></p>
-              <ul></ul>
-            </div>
-            <form class="my-custom-form">
-              <div id="contactform" class="form-long 1">
-                <p class="form__title">Записатись<br />
-                  на пробний урок
-                </p>
-                <div class="form__field form__ver">
-                  </p>
-                  <div class="field-form">
-                      <input size="40" maxlength="400"
-                          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
-                          aria-invalid="false" placeholder="Ім’я" value="" type="text" name="text-name" />
-                  </div>
-                  <div class="field-form2">
-                    <p><span class="wpcf7-form-control-wrap" data-name="email-872"><input size="40" maxlength="400"
-                          class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                          aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email"
-                          name="email-872" /></span>
-                    </p>
-                  </div>
-                  <div class="field-form">
-                    <p><span class="wpcf7-form-control-wrap" data-name="tel-100"><input size="40" maxlength="400"
-                          minlength="12"
-                          class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel phone-input"
-                          aria-required="true" aria-invalid="false" value="" type="tel" name="tel-100" /></span>
-                    </p>
-                  </div>
-                  <div class="form__messenger">
-                    <div class="messenger__title">
-                      <p>Оберіть зручний спосіб зв’язку:
-                      </p>
-                    </div>
-                    <p><span class="wpcf7-form-control-wrap" data-name="radio-messenger"><span
-                          class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input
-                                type="radio" name="radio-messenger" value="Телефонний дзвінок" checked="checked" /><span
-                                class="wpcf7-list-item-label">Телефонний дзвінок</span></label></span><span
-                            class="wpcf7-list-item last"><label><input type="radio" name="radio-messenger"
-                                value="Написати у Telegram" /><span class="wpcf7-list-item-label">Написати у
-                                Telegram</span></label></span></span></span>
-                    </p>
-                  </div>
-                  <div class="form__telegram">
-                    <p><span class="wpcf7-form-control-wrap" data-name="text-telegram"><input size="40" maxlength="400"
-                          class="wpcf7-form-control wpcf7-text" aria-invalid="false"
-                          placeholder="Ваш нікнейм в Telegram" value="" type="text" name="text-telegram" /></span>
-                    </p>
-                  </div>
-                </div>
-                <p><button type="submit" class="link-red">Відправити<span
-                      classs="link__arrow"><svg width="12" height="11">
-                        <use xlink:href="#arrow-white"></use>
-                      </svg></span></button>
-                </p>
-                <div class="form__info">
-                  <p><span>Важливо!</span> Натискаючи “Відправити” ви автоматично погоджуєтесь з умовами <a
-                      href="dogovir-oferty/index.html">Договору оферти</a> та <a
-                      href="polityky-konfidenczijnosti/index.html">Політикою конфіденційності</a>
-                  </p>
-                </div>
-              </div>
-            </form>
+        
+        <div class="trial-form-group">
+          <input type="tel" id="trialEmail" class="trial-input" placeholder="Email" required>
+        </div>
+        
+        <div class="trial-form-group phone-group">
+          <div class="phone-flag">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" alt="UA" class="flag-icon">
+            <span class="phone-code">+38</span>
           </div>
-
+          <input type="tel" id="trialPhone" class="trial-input phone-input" placeholder="" required>
         </div>
-
-      </div>
+        
+        <button type="submit" class="trial-submit-btn">
+          Відправити
+          <svg width="12" height="11" class="arrow-icon">
+            <use xlink:href="#arrow-white"></use>
+          </svg>
+        </button>
+        
+        <div class="trial-info">
+          <p><span class="important">Важливо!</span> Натискаючи "Відправити" ви автоматично погоджуєтесь з умовами <a href="dogovir-oferty/index.html">Договору оферти</a> та <a href="polityky-konfidenczijnosti/index.html">Політикою конфіденційності</a></p>
+        </div>
+        
+        <div id="trialSuccessMessage" class="trial-message trial-success-message"></div>
+        <div id="trialErrorMessage" class="trial-message trial-error-message"></div>
+      </form>
     </div>
   </div>
-
+ 
 
   <!-- Modal MAIN -->
   <div class="modal fade modal--call" id="formModalSummer" tabindex="-1" role="dialog" aria-hidden="true">
@@ -3133,7 +3081,6 @@
                 <input type="hidden" name="_wpcf7cf_steps" value="{}" />
                 <input type="hidden" name="_wpcf7cf_options"
                   value="{&quot;form_id&quot;:7854,&quot;conditions&quot;:[{&quot;then_field&quot;:&quot;-1&quot;,&quot;and_rules&quot;:[{&quot;if_field&quot;:&quot;-1&quot;,&quot;operator&quot;:&quot;equals&quot;,&quot;if_value&quot;:&quot;\u041d\u0430\u043f\u0438\u0441\u0430\u0442\u0438 \u0443 Telegram&quot;}]}],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:&quot;200&quot;,&quot;animation_outtime&quot;:&quot;200&quot;,&quot;conditions_ui&quot;:&quot;normal&quot;,&quot;notice_dismissed&quot;:&quot;&quot;}}" />
-                <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
               </div>
               <div id="contactform" class="form-long 1 form-date">
                 <p class="form__title">Записатись<br />
@@ -3251,7 +3198,6 @@
                 <input type="hidden" name="_wpcf7cf_steps" value="{}" />
                 <input type="hidden" name="_wpcf7cf_options"
                   value="{&quot;form_id&quot;:5225,&quot;conditions&quot;:[{&quot;then_field&quot;:&quot;-1&quot;,&quot;and_rules&quot;:[{&quot;if_field&quot;:&quot;-1&quot;,&quot;operator&quot;:&quot;equals&quot;,&quot;if_value&quot;:&quot;\u041d\u0430\u043f\u0438\u0441\u0430\u0442\u0438 \u0443 Telegram&quot;}]}],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:&quot;200&quot;,&quot;animation_outtime&quot;:&quot;200&quot;,&quot;conditions_ui&quot;:&quot;normal&quot;,&quot;notice_dismissed&quot;:&quot;&quot;}}" />
-                <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
               </div>
               <div id="contactform" class="form-long form-teacher">
                 <p class="form__title form-teacher__title">Кандидат на посаду<br />
@@ -3384,7 +3330,6 @@
                 <input type="hidden" name="_wpcf7cf_steps" value="{}" />
                 <input type="hidden" name="_wpcf7cf_options"
                   value="{&quot;form_id&quot;:4890,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:&quot;200&quot;,&quot;animation_outtime&quot;:&quot;200&quot;,&quot;conditions_ui&quot;:&quot;normal&quot;,&quot;notice_dismissed&quot;:&quot;&quot;}}" />
-                <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
               </div>
               <div id="contactform" class="form-with-check">
                 <p class="form__title">Записатись<br />
@@ -3488,7 +3433,6 @@
                 <input type="hidden" name="_wpcf7cf_steps" value="{}" />
                 <input type="hidden" name="_wpcf7cf_options"
                   value="{&quot;form_id&quot;:2264,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:&quot;200&quot;,&quot;animation_outtime&quot;:&quot;200&quot;,&quot;conditions_ui&quot;:&quot;normal&quot;,&quot;notice_dismissed&quot;:&quot;&quot;}}" />
-                <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
               </div>
               <div id="contactform">
                 <p class="form__title">Записатись<br />
@@ -3590,7 +3534,6 @@
                 <input type="hidden" name="_wpcf7cf_steps" value="{}" />
                 <input type="hidden" name="_wpcf7cf_options"
                   value="{&quot;form_id&quot;:1581,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:&quot;200&quot;,&quot;animation_outtime&quot;:&quot;200&quot;,&quot;conditions_ui&quot;:&quot;normal&quot;,&quot;notice_dismissed&quot;:&quot;&quot;}}" />
-                <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
               </div>
               <div id="contactform">
                 <p class="form__title">Стати учасником<br />
@@ -3672,25 +3615,157 @@
   <div id="courseModal" class="course-modal">
     <div class="modal-content">
       <button class="modal-close" onclick="closeCourseModal()">&times;</button>
-      <h2 class="modal-title" id="modalCourseTitle">Курс A1</h2>
-      <p class="modal-subtitle">Залиште свої контактні дані, і ми зв'яжемося з вами для консультації</p>
       
-      <form id="courseForm" class="my-custom-form">
-        <div class="form-group">
-          <label for="userName" class="form-label">Ваше ім'я</label>
-          <input type="text" id="userName" class="form-input" placeholder="Введіть ваше ім'я" required>
+      <div class="modal-body">
+        <!-- Ліва частина - інформація про курс -->
+        <div class="course-info">
+          <h2 class="modal-title" id="modalCourseTitle">Курс A1</h2>
+          
+          <!-- Контент для різних курсів -->
+          <div id="courseA1" class="course-details">
+            <ul class="course-features">
+              <li>Плавне занурення у мову для новачків</li>
+              <li>Алфавіт, базова граматика, перші 800–1000 слів</li>
+              <li>Комунікація в побутових ситуаціях: покупки, кафе, транспорт</li>
+              <li>Формати: індивідуально / спліт / група</li>
+              <li>Акцент: говоріння з першого заняття</li>
+            </ul>
+            <!-- <div class="course-actions">
+              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
+              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
+            </div> -->
+          </div>
+          
+          <div id="courseA2" class="course-details" style="display: none;">
+            <ul class="course-features">
+              <li>Для тих, хто вже має базу</li>
+              <li>1500–2000 слів, впевнене спілкування у подорожах, у лікаря, у справах</li>
+              <li>Побудова складніших речень, розуміння текстів</li>
+              <li>Формати: індивідуально / спліт / група</li>
+              <li>Акцент: практичні ситуації та розширення словника</li>
+            </ul>
+            <div class="course-actions">
+              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
+              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
+            </div>
+          </div>
+          
+          <div id="courseB1" class="course-details" style="display: none;">
+            <div class="course-badge">🔹 B1 (Fakhivets → Profi)</div>
+            <ul class="course-features">
+              <li>Рівень для життя та роботи в Німеччині</li>
+              <li>2400+ слів, вільна розмова на будь-яку тему</li>
+              <li>Документи, співбесіди, підготовка до університету</li>
+              <li>Формати: індивідуально / спліт / група</li>
+              <li>Акцент: професійні та навчальні цілі</li>
+            </ul>
+            <div class="course-actions">
+              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
+              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
+            </div>
+          </div>
+          
+          <div id="courseB2" class="course-details" style="display: none;">
+            <ul class="course-features">
+              <li>Вільне володіння для навчання та роботи</li>
+              <li>Офіційні листи, виступи, ділова комунікація</li>
+              <li>Підготовка до іспиту B2 Beruf</li>
+              <li>Формати: індивідуально / спліт / група</li>
+              <li>Акцент: професійна мова та впевнене письмо</li>
+            </ul>
+            <div class="course-actions">
+              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
+              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
+            </div>
+          </div>
+          
+          <div id="courseC1" class="course-details" style="display: none;">
+            <ul class="course-features">
+              <li>Академічний та професійний рівень</li>
+              <li>Університети, медицина, право, бізнес</li>
+              <li>Складні тексти, переговори, публічні виступи</li>
+              <li>Підготовка до іспиту C1 Beruf</li>
+              <li>Формати: індивідуально / спліт / група</li>
+              <li>Акцент: глибока академічна та ділова комунікація</li>
+            </ul>
+            <div class="course-actions">
+              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
+              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
+            </div>
+          </div>
+          
+          <div id="courseTeens" class="course-details" style="display: none;">
+            <ul class="course-features">
+              <li>Допомагаємо дітям адаптуватися до шкільної програми в Німеччині чи Австрії</li>
+              <li>Працюємо над читанням, письмом, граматикою й упевненим мовленням</li>
+              <li>Легко пояснюємо складні правила та розвиваємо любов до мови</li>
+            </ul>
+            <div class="course-actions">
+              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
+              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
+            </div>
+          </div>
+          
+          <div id="courseExams" class="course-details" style="display: none;">
+            <ul class="course-features">
+              <li>Інтенсивні програми, побудовані на реальних завданнях із тестів</li>
+              <li>Тренування письма, розмовних тем та аудіювання</li>
+              <li>Детальний розбір типових помилок + персональні рекомендації</li>
+            </ul>
+            <div class="course-actions">
+              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
+              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
+            </div>
+          </div>
+          
+          <div id="courseClub" class="course-details" style="display: none;">
+            <ul class="course-features">
+              <li>Живе спілкування німецькою у групах B1–C1</li>
+              <li>Тематичні зустрічі з викладачем, інтерактивні дискусії, рольові ігри</li>
+              <li>Допомагає швидко подолати мовний бар'єр і прокачати впевненість</li>
+            </ul>
+            <div class="course-actions">
+              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
+              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
+            </div>
+          </div>
+          
+          <div id="courseTelegram" class="course-details" style="display: none;">
+            <ul class="course-features">
+              <li>Дивіться фільми та серіали німецькою мовою із субтитрами та поясненнями</li>
+              <li>Навчання через улюблений формат: слухаєте живу мову, вчите вирази з реального життя</li>
+              <li>Щотижня — новий контент для різних рівнів (від A2 до C1)</li>
+              <li>Формат підписки: отримуєте доступ одразу після оплати</li>
+            </ul>
+            <div class="course-actions">
+              <button class="action-btn primary" onclick="subscribeTelegram()">Підписатися</button>
+            </div>
+          </div>
         </div>
         
-        <div class="form-group">
-          <label for="userPhone" class="form-label">Номер телефону</label>
-          <input type="tel" id="userPhone" class="form-input" placeholder="+380" required>
+        <!-- Права частина - форма -->
+        <div class="form-section">
+          <h3 class="form-title">Залишити заявку</h3>
+          <p class="form-subtitle">Залиште свої контактні дані, і ми зв'яжемося з вами для консультації</p>
+          
+          <form id="courseForm" class="my-custom-form">
+            <div class="form-group">
+              <label for="userName" class="form-label">Ваше ім'я</label>
+              <input type="text" id="userName" class="form-input" placeholder="Введіть ваше ім'я" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="userPhone" class="form-label">Номер телефону</label>
+              <input type="tel" id="userPhone" class="form-input" placeholder="+380" required>
+            </div>
+            
+            <button type="submit" id="submitBtn" class="submit-btn">Відправити заявку</button>
+            
+            <div id="successMessage" class="message success-message"></div>
+            <div id="errorMessage" class="message error-message"></div>
+          </form>
         </div>
-        
-        <button type="submit" id="submitBtn" class="submit-btn">Відправити заявку</button>
-        
-        <div id="successMessage" class="message success-message"></div>
-        <div id="errorMessage" class="message error-message"></div>
-      </form>
+      </div>
     </div>
   </div>
 
@@ -3706,6 +3781,9 @@
 
   <!-- Підключення Image Modal -->
   <script src="imageModal.js"></script>
+  
+  <!-- JavaScript для модального вікна курсів -->
+  <script src="courseModal.js"></script>
   
   <!-- Підключення Telegram API -->
   <script src="tg.js"></script>
