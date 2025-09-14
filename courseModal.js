@@ -49,6 +49,25 @@ function openCourseModal(courseTitle) {
     targetCourse.style.display = 'block';
   }
   
+  // Приховуємо або показуємо форму залежно від типу курсу
+  const formSection = document.querySelector('.form-section');
+  const modalContent = document.querySelector('.modal-content');
+  if (courseTitle === '🎬 Телеграм-канал із фільмами') {
+    // Для Telegram каналу приховуємо форму
+    formSection.style.display = 'none';
+    // Змінюємо layout на одну колонку
+    document.querySelector('.modal-body').style.gridTemplateColumns = '1fr';
+    // Додаємо клас для меншого розміру модального вікна
+    modalContent.classList.add('no-form');
+  } else {
+    // Для інших курсів показуємо форму
+    formSection.style.display = 'block';
+    // Повертаємо двоколонковий layout
+    document.querySelector('.modal-body').style.gridTemplateColumns = '1fr 400px';
+    // Видаляємо клас для меншого розміру
+    modalContent.classList.remove('no-form');
+  }
+  
   // Показуємо модальне вікно
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
@@ -59,6 +78,14 @@ function closeCourseModal() {
   const modal = document.getElementById('courseModal');
   modal.style.display = 'none';
   document.body.style.overflow = 'auto';
+  
+  // Відновлюємо стандартний layout і показуємо форму
+  const formSection = document.querySelector('.form-section');
+  const modalBody = document.querySelector('.modal-body');
+  const modalContent = document.querySelector('.modal-content');
+  if (formSection) formSection.style.display = 'block';
+  if (modalBody) modalBody.style.gridTemplateColumns = '1fr 400px';
+  if (modalContent) modalContent.classList.remove('no-form');
   
   // Очищаємо форму
   const form = document.getElementById('courseForm');
@@ -92,9 +119,4 @@ function openPriceModal() {
 
 function openTrialModal() {
   alert('Функція "Записатися на пробний" буде реалізована пізніше');
-}
-
-function subscribeTelegram() {
-  // Перенаправляємо на сторінку підписки на Telegram-канал
-  window.open('https://chaikaonline.sitepulse.com.ua/filmsclub?fbclid=PAdGRleAMtVa9leHRuA2FlbQIxMQABp3TcDqk--uPpdZyYGasX9FK34eNvwrdNBIXpDovvY-OKeJ_10MfWCYwyAP2y_aem_aJsWEyPPcEU2nB6XGVRxNw', '_blank');
 }

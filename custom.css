@@ -32,9 +32,38 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     width: 95%;
     max-width: 1200px;
+    max-height: 90vh;
     position: relative;
     animation: slideIn 0.3s ease-out;
     border: 1px solid #e9ecef;
+    overflow-y: auto;
+}
+
+/* Менший розмір модального вікна коли немає форми */
+.modal-content.no-form {
+    max-width: 500px;
+    width: 80%;
+}
+
+/* Стилі для відео відгуків */
+.review__video {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review__video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.review__video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #f8f9fa;
 }
 
 .modal-close {
@@ -55,6 +84,7 @@
     border-radius: 50%;
     background: transparent;
     border: none;
+    z-index: 1000;
 }
 
 .modal-close:hover {
@@ -315,6 +345,10 @@
         gap: 30px;
     }
     
+    .modal-body[style*="grid-template-columns: 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+    
     .form-section {
         padding: 25px;
     }
@@ -326,11 +360,28 @@
         margin: 20px;
         max-width: none;
         width: calc(100% - 40px);
+        max-height: 85vh;
+    }
+    
+    .modal-content.no-form {
+        max-width: 450px;
+        width: calc(100% - 40px);
+    }
+    
+    /* Адаптивність для відео відгуків на планшетах */
+    .review__video video {
+        height: auto;
+        min-height: 400px;
     }
     
     .modal-body {
         grid-template-columns: 1fr;
         gap: 25px;
+    }
+    
+    .modal-body[style*="grid-template-columns: 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 0;
     }
     
     .modal-title {
@@ -381,6 +432,18 @@
         padding: 15px;
         margin: 10px;
         width: calc(100% - 20px);
+        max-height: 80vh;
+    }
+    
+    .modal-content.no-form {
+        max-width: 400px;
+        width: calc(100% - 20px);
+    }
+    
+    /* Адаптивність для відео відгуків на мобільних */
+    .review__video video {
+        height: auto;
+        min-height: 300px;
     }
     
     .course-badge {
@@ -836,5 +899,11 @@
     .trial-submit-btn {
         padding: 14px;
         font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .home .banner-my-hero {
+        margin-top: 30px;
     }
 }

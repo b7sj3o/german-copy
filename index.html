@@ -65,7 +65,6 @@
     !function (s, n) { var o, i, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), a = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === a[t] }) } function u(e, t) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); for (var n = e.getImageData(16, 16, 1, 1), a = 0; a < n.data.length; a++)if (0 !== n.data[a]) return !1; return !0 } function f(e, t, n, a) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\udde8\ud83c\uddf6", "\ud83c\udde8\u200b\ud83c\uddf6") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !a(e, "\ud83e\udedf") }return !1 } function g(e, t, n, a) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : s.createElement("canvas"), o = r.getContext("2d", { willReadFrequently: !0 }), i = (o.textBaseline = "top", o.font = "600 32px Arial", {}); return e.forEach(function (e) { i[e] = t(o, e, n, a) }), i } function t(e) { var t = s.createElement("script"); t.src = e, t.defer = !0, s.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", i = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { s.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + g.toString() + "(" + [JSON.stringify(i), f.toString(), p.toString(), u.toString()].join(",") + "));", a = new Blob([e], { type: "text/javascript" }), r = new Worker(URL.createObjectURL(a), { name: "wpTestEmojiSupports" }); return void (r.onmessage = function (e) { c(n = e.data), r.terminate(), t(n) }) } catch (e) { } c(n = g(i, f, p, u)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
     /* ]]> */
   </script>
-  <link rel="stylesheet" href="fonts.css">
   
   <!-- Image Modal Styles -->
   <style id='image-modal-styles-inline-css' type='text/css'>
@@ -611,121 +610,23 @@
               <nav class="navbar navbar-expand-xl p-0 nav-area">
                 <div id="main-nav" class="menu-main-ua-container">
                   <ul id="menu-main-ua" class="">
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11"
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-11 nav-item">
-                      <a title="Наші курси" href="index.html#" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-11">Наші
-                        курси</a><span class="nav-toggle"></span>
-                      <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-11" role="menu">
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-3760"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3760 nav-item"><a
-                            title="Курс А1 - початковий рівень" href="index.html@p=1003" class="dropdown-item">Курс А1
-                            &#8211; початковий рівень</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-3761"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3761 nav-item"><a
-                            title="Курс А2 - основні, базові знання" href="index.html@p=1614" class="dropdown-item">Курс
-                            А2 &#8211; основні, базові знання</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-3762"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3762 nav-item"><a
-                            title="Курс В1 - середній рівень" href="index.html@p=1599" class="dropdown-item">Курс В1
-                            &#8211; середній рівень</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-3763"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3763 nav-item"><a
-                            title="Курс В2 - високий рівень" href="index.html@p=1608" class="dropdown-item">Курс В2
-                            &#8211; високий рівень</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-879"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-879 nav-item"><a
-                            title="Підготовка до іспитів" href="index.html@p=876" class="dropdown-item">Підготовка до
-                            іспитів</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-2724"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2724 nav-item"><a
-                            title="Корпоративне навчання" href="index.html@p=1294" class="dropdown-item">Корпоративне
-                            навчання</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-5529"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5529 nav-item"><a
-                            title="Німецька для підлітків" href="index.html@p=866" class="dropdown-item">Німецька для
-                            підлітків</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-5530"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5530 nav-item"><a
-                            title="Шпрах-клуб" href="index.html@p=328" class="dropdown-item">Шпрах-клуб</a></li>
-                      </ul>
-                    </li>
                     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
+                      class="menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-11 nav-item">
+                      <a title="Наші курси" href="#ourcourses"
+                        aria-expanded="false" class="nav-link">Наші
+                        курси</a>
+                    </li>
+                    <!-- <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                       id="menu-item-4286"
                       class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-4286 nav-item">
-                      <a title="Ціни" href="index.html#" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" class="dropdown-toggle nav-link"
-                        id="menu-item-dropdown-4286">Ціни</a><span class="nav-toggle"></span>
-                      <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4286" role="menu">
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-4287"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4287 nav-item"><a
-                            title="Курс А1 - початковий рівень" href="index.html@p=1003" class="dropdown-item">Курс А1
-                            &#8211; початковий рівень</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-4288"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4288 nav-item"><a
-                            title="Курс А2 - основні, базові знання" href="index.html@p=1614" class="dropdown-item">Курс
-                            А2 &#8211; основні, базові знання</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-4289"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4289 nav-item"><a
-                            title="Курс В1 - середній рівень" href="index.html@p=1599" class="dropdown-item">Курс В1
-                            &#8211; середній рівень</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-4290"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4290 nav-item"><a
-                            title="Курс В2 - високий рівень" href="index.html@p=1608" class="dropdown-item">Курс В2
-                            &#8211; високий рівень</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-4291"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4291 nav-item"><a
-                            title="Підготовка до іспитів" href="index.html@p=876" class="dropdown-item">Підготовка до
-                            іспитів</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-4292"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4292 nav-item"><a
-                            title="Корпоративне навчання" href="index.html@p=1294" class="dropdown-item">Корпоративне
-                            навчання</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-5610"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5610 nav-item"><a
-                            title="Німецька для підлітків" href="index.html@p=866" class="dropdown-item">Німецька для
-                            підлітків</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                          id="menu-item-5611"
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5611 nav-item"><a
-                            title="Шпрах-клуб" href="index.html@p=328" class="dropdown-item">Шпрах-клуб</a></li>
-                      </ul>
-                    </li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-6321"
-                      class="link-vitamin menu-item menu-item-type-post_type menu-item-object-page menu-item-6321 nav-item">
-                      <a title="Vitamin DE" href="index.html@p=5878" class="nav-link">Vitamin <span>DE</span></a>
-                    </li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-5523"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5523 nav-item"><a
-                        title="Шпрах-клуб" href="index.html@p=328" class="nav-link">Шпрах-клуб</a></li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-1296"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1296 nav-item"><a
-                        title="Партнерство" href="index.html@p=1294" class="nav-link">Партнерство</a></li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-425"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-425 nav-item"><a
-                        title="Блог" href="category/blog/index.html" class="nav-link">Блог</a></li>
+                      <a title="Ціни" href="#" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" class="dropdown-toggle nav-link">Ціни</a><span class="nav-toggle"></span>
+                    </li> -->
+                    
                     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                       id="menu-item-3503"
                       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3503 nav-item"><a
-                        title="Контакти" href="index.html@p=3472" class="nav-link">Контакти</a></li>
+                        title="Контакти" href="#footer" class="nav-link">Контакти</a></li>
                   </ul>
                 </div>
               </nav>
@@ -850,7 +751,7 @@
             </div>
 
 
-            <div class="banner__items">
+            <div class="banner__items banner-my-hero">
 
               <div class="banner__item box">
                 <div class="box__img">
@@ -1111,7 +1012,7 @@
                   </div>
                   <p class="item__title"><span>A1 (Starter → Znatok)</span></p>
                   <p class="item__desc">Перші кроки в німецькій: алфавіт, базова граматика, до 800 слів.<br>Формати: індивідуально / спліт / група.</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('A1 (Starter → Znatok)'); return false;">
+                  <a class="link-default" href="javascript:void(0)" onclick="openCourseModal('A1 (Starter → Znatok)'); return false;">
                     Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1128,7 +1029,7 @@
                   </div>
                   <p class="item__title"><span>A2 (Erudyt → Flahman)</span></p>
                   <p class="item__desc">Впевнене спілкування в побуті, подорожах, соціальних ситуаціях.<br>Формати: індивідуально / спліт / група.</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('A2 (Erudyt → Flahman)'); return false;">
+                  <a class="link-default" href="javascript:void(0)" onclick="openCourseModal('A2 (Erudyt → Flahman)'); return false;">
                     Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1145,7 +1046,7 @@
                   </div>
                   <p class="item__title"><span>B1 (Fakhivets → Profi)</span></p>
                   <p class="item__desc">Рівень для життя та роботи в Німеччині. Підготовка до співбесід і навчання.<br>Формати: індивідуально / спліт / група.</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('B1 (Fakhivets → Profi)'); return false;">
+                  <a class="link-default" href="javascript:void(0)" onclick="openCourseModal('B1 (Fakhivets → Profi)'); return false;">
                     Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1162,7 +1063,7 @@
                   </div>
                   <p class="item__title"><span>B2 (Fortgeschritten → Expert)</span></p>
                   <p class="item__desc">Вільне володіння мовою. Професійна лексика, підготовка до B2 Beruf.<br>Формати: індивідуально / спліт / група.</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('B2 (Fortgeschritten → Expert)'); return false;">
+                  <a class="link-default" href="javascript:void(0)" onclick="openCourseModal('B2 (Fortgeschritten → Expert)'); return false;">
                     Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1179,7 +1080,7 @@
                   </div>
                   <p class="item__title"><span>C1 (Master → Profi+)</span></p>
                   <p class="item__desc">Академічний і професійний рівень. Підготовка до C1 Beruf.<br>Формати: індивідуально / спліт / група.</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('C1 (Master → Profi+)'); return false;">
+                  <a class="link-default" href="javascript:void(0)" onclick="openCourseModal('C1 (Master → Profi+)'); return false;">
                     Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1196,7 +1097,7 @@
                   </div>
                   <p class="item__title"><span>👦 Німецька для підлітків</span></p>
                   <p class="item__desc">Допомога у школі: читання, письмо, граматика.</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('👦 Німецька для підлітків'); return false;">
+                  <a class="link-default" href="javascript:void(0)" onclick="openCourseModal('👦 Німецька для підлітків'); return false;">
                     Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1213,7 +1114,7 @@
                   </div>
                   <p class="item__title"><span>🎯 Підготовка до іспитів (B1, B2, C1 Beruf)</span></p>
                   <p class="item__desc">Інтенсиви з практикою за темами екзаменів.</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('🎯 Підготовка до іспитів'); return false;">
+                  <a class="link-default" href="javascript:void(0)" onclick="openCourseModal('🎯 Підготовка до іспитів'); return false;">
                     Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1230,7 +1131,7 @@
                   </div>
                   <p class="item__title"><span>💬 Мовний клуб</span></p>
                   <p class="item__desc">Групові заняття для практики розмови (B1–C1).</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('💬 Мовний клуб'); return false;">
+                  <a class="link-default" href="javascript:void(0)" onclick="openCourseModal('💬 Мовний клуб'); return false;">
                     Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1247,7 +1148,7 @@
                   </div>
                   <p class="item__title"><span>🎬 Телеграм-канал із фільмами</span></p>
                   <p class="item__desc">Вивчай німецьку через кіно з поясненнями.</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('🎬 Телеграм-канал із фільмами'); return false;">
+                  <a class="link-default" href="javascript:void(0)" onclick="openCourseModal('🎬 Телеграм-канал із фільмами'); return false;">
                     Детальніше <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1264,7 +1165,7 @@
                   </div>
                   <p class="item__title"><span>🔑 Закритий клуб за підпискою</span></p>
                   <p class="item__desc">Ексклюзивні матеріали, вправи й підтримка спільноти.</p>
-                  <a class="link-default" href="#" onclick="openCourseModal('🔑 Закритий клуб за підпискою'); return false;">
+                  <a class="link-default" href="https://chaikaonline.sitepulse.com.ua/filmsclub?fbclid=PAdGRleAMtVa9leHRuA2FlbQIxMQABp3TcDqk--uPpdZyYGasX9FK34eNvwrdNBIXpDovvY-OKeJ_10MfWCYwyAP2y_aem_aJsWEyPPcEU2nB6XGVRxNw" target="_blank">
                     Приєднатися <svg width="10" height="9">
                       <use xlink:href="#arrow-red"></use>
                     </svg>
@@ -1725,25 +1626,14 @@
           <div class="container">
             <div class="join">
               <div class="join__title"> Долучитися до команди викладачів</div>
-              <!--
-																<button class="link-red" data-toggle="modal" data-target="#formModalteacher" href="#" target="_self">Заповнити форму					<span classs="link__arrow">
-						<svg width="12" height="11">
-							<use xlink:href="#arrow-white"></use>
-						</svg>
-					</span>
-				</button>
-				-->
-
-
-              <a class="link-red"
-                href="https://aura-school.top/german-teacher?utm_source=site&#038;utm_medium=vykladachi&#038;utm_content=golovna"
-                target="_blank">
+              
+              <button class="link-red" onclick="openTrialModal('teacher')">
                 Заповнити форму <span classs="link__arrow">
                   <svg width="12" height="11">
                     <use xlink:href="#arrow-white"></use>
                   </svg>
                 </span>
-              </a>
+              </button>
 
 
 
@@ -2134,6 +2024,47 @@
                   <img
                     data-lazy="images/reviews/13.jpg"
                     width="318" height="565" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- Video Reviews -->
+            <div class="slider__item">
+              <div class="review">
+                <div class="review__video">
+                  <video width="318" height="565" controls poster="">
+                    <source src="videos/1.mp4" type="video/mp4">
+                    Ваш браузер не підтримує відео.
+                  </video>
+                </div>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="review">
+                <div class="review__video">
+                  <video width="318" height="565" controls poster="">
+                    <source src="videos/2.mp4" type="video/mp4">
+                    Ваш браузер не підтримує відео.
+                  </video>
+                </div>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="review">
+                <div class="review__video">
+                  <video width="318" height="565" controls poster="">
+                    <source src="videos/3.mp4" type="video/mp4">
+                    Ваш браузер не підтримує відео.
+                  </video>
+                </div>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="review">
+                <div class="review__video">
+                  <video width="318" height="565" controls poster="">
+                    <source src="videos/4.mp4" type="video/mp4">
+                    Ваш браузер не підтримує відео.
+                  </video>
                 </div>
               </div>
             </div>
@@ -2633,7 +2564,7 @@
     </main>
 
     <footer>
-      <div class="footer">
+      <div class="footer" id="footer">
         <div class="footer__top">
           <div class="container">
             <div class="footer__info">
@@ -2670,50 +2601,20 @@
                   <ul id="menu-footer-ua" class="">
                     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-83"
                       class="ourcourses tanchor menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item active menu-item-83 nav-item">
-                      <a title="Наші курси" href="index.html#ourcourses" class="nav-link">Наші курси</a>
+                      <a title="Наші курси" href="#ourcourses" class="nav-link">Наші курси</a>
                     </li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-2934"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2934 nav-item"><a
-                        title="Партнерство" href="index.html@p=1294" class="nav-link">Партнерство</a></li>
+                  
                     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                       id="menu-item-4422"
                       class="tanchor menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item active menu-item-4422 nav-item">
-                      <a title="Групи" href="index.html#groupStart" class="nav-link">Групи</a>
+                      <a title="Групи" href="#groupStart" class="nav-link">Групи</a>
                     </li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-427"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-427 nav-item"><a
-                        title="Блог" href="category/blog/index.html" class="nav-link">Блог</a></li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-2226"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2226 nav-item"><a
-                        title="Пройти тест" href="index.html@p=1933" class="nav-link">Пройти тест</a></li>
                     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-87"
                       class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87 nav-item"><a
                         title="Стати викладачем"
-                        href="https://aura-school.top/german-teacher?utm_source=site&#038;utm_medium=pidval"
+                        href="javascript:void(0)" onclick="openTrialModal('teacher')"
                         class="nav-link">Стати викладачем</a></li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-3257"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3257 nav-item"><a
-                        title="Карта сайту" href="map/index.html" class="nav-link">Карта сайту</a></li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-3496"
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3496 nav-item"><a
-                        title="Сертифікат" href="index.html@p=1003#certificate" class="nav-link">Сертифікат</a></li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-3495"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3495 nav-item"><a
-                        title="Контакти" href="index.html@p=3472" class="nav-link">Контакти</a></li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-5531"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5531 nav-item"><a
-                        title="Німецька для підлітків" href="index.html@p=866" class="nav-link">Німецька для
-                        підлітків</a></li>
-                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-5532"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5532 nav-item"><a
-                        title="Мовний клуб" href="index.html@p=328" class="nav-link">Мовний клуб</a></li>
+                   
                   </ul>
                 </div>
               </nav>
@@ -2807,6 +2708,9 @@
   <link rel='stylesheet' id='intlTelInput-css'
     href='https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/css/intlTelInput.css?ver=1.0.0'
     type='text/css' media='all' />
+
+  <link rel="stylesheet" href="fonts.css">
+
 
 
   <script type="text/javascript" src="https://aura-school.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"
@@ -3630,10 +3534,7 @@
               <li>Формати: індивідуально / спліт / група</li>
               <li>Акцент: говоріння з першого заняття</li>
             </ul>
-            <!-- <div class="course-actions">
-              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
-              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
-            </div> -->
+      
           </div>
           
           <div id="courseA2" class="course-details" style="display: none;">
@@ -3644,14 +3545,9 @@
               <li>Формати: індивідуально / спліт / група</li>
               <li>Акцент: практичні ситуації та розширення словника</li>
             </ul>
-            <div class="course-actions">
-              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
-              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
-            </div>
           </div>
           
           <div id="courseB1" class="course-details" style="display: none;">
-            <div class="course-badge">🔹 B1 (Fakhivets → Profi)</div>
             <ul class="course-features">
               <li>Рівень для життя та роботи в Німеччині</li>
               <li>2400+ слів, вільна розмова на будь-яку тему</li>
@@ -3659,10 +3555,6 @@
               <li>Формати: індивідуально / спліт / група</li>
               <li>Акцент: професійні та навчальні цілі</li>
             </ul>
-            <div class="course-actions">
-              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
-              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
-            </div>
           </div>
           
           <div id="courseB2" class="course-details" style="display: none;">
@@ -3673,10 +3565,6 @@
               <li>Формати: індивідуально / спліт / група</li>
               <li>Акцент: професійна мова та впевнене письмо</li>
             </ul>
-            <div class="course-actions">
-              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
-              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
-            </div>
           </div>
           
           <div id="courseC1" class="course-details" style="display: none;">
@@ -3688,10 +3576,6 @@
               <li>Формати: індивідуально / спліт / група</li>
               <li>Акцент: глибока академічна та ділова комунікація</li>
             </ul>
-            <div class="course-actions">
-              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
-              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
-            </div>
           </div>
           
           <div id="courseTeens" class="course-details" style="display: none;">
@@ -3699,11 +3583,7 @@
               <li>Допомагаємо дітям адаптуватися до шкільної програми в Німеччині чи Австрії</li>
               <li>Працюємо над читанням, письмом, граматикою й упевненим мовленням</li>
               <li>Легко пояснюємо складні правила та розвиваємо любов до мови</li>
-            </ul>
-            <div class="course-actions">
-              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
-              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
-            </div>
+            </ul> 
           </div>
           
           <div id="courseExams" class="course-details" style="display: none;">
@@ -3712,10 +3592,6 @@
               <li>Тренування письма, розмовних тем та аудіювання</li>
               <li>Детальний розбір типових помилок + персональні рекомендації</li>
             </ul>
-            <div class="course-actions">
-              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
-              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
-            </div>
           </div>
           
           <div id="courseClub" class="course-details" style="display: none;">
@@ -3724,10 +3600,6 @@
               <li>Тематичні зустрічі з викладачем, інтерактивні дискусії, рольові ігри</li>
               <li>Допомагає швидко подолати мовний бар'єр і прокачати впевненість</li>
             </ul>
-            <div class="course-actions">
-              <button class="action-btn primary" onclick="openPriceModal()">Дізнатися ціну</button>
-              <button class="action-btn secondary" onclick="openTrialModal()">Записатися на пробний</button>
-            </div>
           </div>
           
           <div id="courseTelegram" class="course-details" style="display: none;">
@@ -3738,7 +3610,7 @@
               <li>Формат підписки: отримуєте доступ одразу після оплати</li>
             </ul>
             <div class="course-actions">
-              <button class="action-btn primary" onclick="subscribeTelegram()">Підписатися</button>
+              <a class="action-btn primary" href="https://t.me/deutsch_mit_lust_schule" target="_blank">Підписатися</a>
             </div>
           </div>
         </div>

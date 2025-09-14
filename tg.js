@@ -74,32 +74,42 @@ async function sendTrialToTelegram(name, email, phone) {
     }
 }
 
-// Функція для відкриття модального вікна
-function openCourseModal(courseName) {
-    const modal = document.getElementById('courseModal');
-    const courseTitle = document.getElementById('modalCourseTitle');
+// Функція для відправки заявки викладача
+async function sendTeacherApplicationToTelegram(name, email, phone) {
+    const message = `🎓 Нова заявка від викладача!\n\n👤 Ім'я: ${name}\n📧 Email: ${email}\n📞 Телефон: ${phone}\n\n📋 Тип заявки: Викладач німецької мови\n⏰ Час подачі: ${new Date().toLocaleString('uk-UA')}`;
     
-    courseTitle.textContent = courseName;
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Блокуємо скрол фону
+    const url = `https://api.telegram.org/bot${TELEGRAM_CONFIG.BOT_TOKEN}/sendMessage`;
+    
+    const data = {
+        chat_id: TELEGRAM_CONFIG.CHAT_ID,
+        text: message,
+        parse_mode: 'HTML'
+    };
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        
+        if (result.ok) {
+            return { success: true, message: 'Повідомлення надіслано успішно!' };
+        } else {
+            console.error('Telegram API Error:', result);
+            return { success: false, message: 'Помилка при відправці повідомлення' };
+        }
+    } catch (error) {
+        console.error('Network Error:', error);
+        return { success: false, message: 'Помилка мережі' };
+    }
 }
 
-// Функція для закриття модального вікна
-function closeCourseModal() {
-    const modal = document.getElementById('courseModal');
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Відновлюємо скрол фону
-    
-    // Очищаємо форму
-    document.getElementById('userName').value = '';
-    document.getElementById('userPhone').value = '';
-    
-    // Приховуємо повідомлення про результат
-    const successMsg = document.getElementById('successMessage');
-    const errorMsg = document.getElementById('errorMessage');
-    successMsg.style.display = 'none';
-    errorMsg.style.display = 'none';
-}
+// Course modal functions are now handled by courseModal.js
 
 // Функція для обробки відправки форми
 async function handleFormSubmit(event) {
@@ -187,29 +197,7 @@ function formatPhoneNumber(input) {
 
 // Ініціалізація після завантаження DOM
 document.addEventListener('DOMContentLoaded', function() {
-    // Додаємо обробник для закриття модального вікна при кліку поза ним
-    const modal = document.getElementById('courseModal');
-    if (modal) {
-        modal.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                closeCourseModal();
-            }
-        });
-    }
-    
-    // Додаємо обробник для форматування телефону
-    const phoneInput = document.getElementById('userPhone');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function() {
-            formatPhoneNumber(this);
-        });
-    }
-    
-    // Додаємо обробник для форми
-    const form = document.getElementById('courseForm');
-    if (form) {
-        form.addEventListener('submit', handleFormSubmit);
-    }
+    // Course modal event listeners are handled by courseModal.js
     
     // Додаємо обробники для trial modal
     const trialModal = document.getElementById('trialModal');
@@ -239,8 +227,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Trial Modal Functions
-function openTrialModal() {
+function openTrialModal(type = 'student') {
     const modal = document.getElementById('trialModal');
+    const title = document.querySelector('.trial-modal-title');
+    
+    // Змінюємо заголовок залежно від типу
+    if (type === 'teacher') {
+        title.innerHTML = 'Подати заявку<br />на посаду<br />викладача';
+        // Зберігаємо тип в атрибуті модального вікна
+        modal.setAttribute('data-type', 'teacher');
+    } else {
+        title.innerHTML = 'Записатись<br />на пробний<br />урок';
+        modal.setAttribute('data-type', 'student');
+    }
+    
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
@@ -255,11 +255,18 @@ function closeTrialModal() {
     document.getElementById('trialEmail').value = '';
     document.getElementById('trialPhone').value = '';
     
+    // Скидаємо тип модального вікна та заголовок
+    modal.removeAttribute('data-type');
+    const title = document.querySelector('.trial-modal-title');
+    if (title) {
+        title.innerHTML = 'Записатись<br />на пробний<br />урок';
+    }
+    
     // Приховуємо повідомлення
     const successMsg = document.getElementById('trialSuccessMessage');
     const errorMsg = document.getElementById('trialErrorMessage');
-    successMsg.style.display = 'none';
-    errorMsg.style.display = 'none';
+    if (successMsg) successMsg.style.display = 'none';
+    if (errorMsg) errorMsg.style.display = 'none';
 }
 
 // Функція для обробки відправки trial форми
@@ -293,12 +300,26 @@ async function handleTrialFormSubmit(event) {
     submitBtn.disabled = true;
     
     try {
-        // Відправляємо дані в Telegram
-        const result = await sendTrialToTelegram(name, email, phone);
+        // Перевіряємо тип заявки
+        const modal = document.getElementById('trialModal');
+        const modalType = modal.getAttribute('data-type') || 'student';
+        
+        let result;
+        if (modalType === 'teacher') {
+            // Відправляємо заявку викладача
+            result = await sendTeacherApplicationToTelegram(name, email, phone);
+            if (result.success) {
+                showTrialSuccess('Дякуємо! Ваша заявка на посаду викладача надіслана. Ми зв\'яжемося з вами найближчим часом.');
+            }
+        } else {
+            // Відправляємо заявку на пробний урок
+            result = await sendTrialToTelegram(name, email, phone);
+            if (result.success) {
+                showTrialSuccess('Дякуємо! Ваша заявка надіслана. Ми зв\'яжемося з вами найближчим часом.');
+            }
+        }
         
         if (result.success) {
-            showTrialSuccess('Дякуємо! Ваша заявка надіслана. Ми зв\'яжемося з вами найближчим часом.');
-            
             // Закриваємо модальне вікно через 2 секунди
             setTimeout(() => {
                 closeTrialModal();
