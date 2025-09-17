@@ -217,12 +217,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Оновлення видимого телефонного коду при зміні країни
+    // Оновлення видимого телефонного коду та прапора при зміні країни
     const trialCountryCode = document.getElementById('trialCountryCode');
     if (trialCountryCode) {
         trialCountryCode.addEventListener('change', function() {
             const codeSpan = document.querySelector('#trialModal .phone-code');
+            const flagIcon = document.getElementById('trialFlagIcon');
+            const selectedOption = this.options[this.selectedIndex];
+            
             if (codeSpan) codeSpan.textContent = this.value;
+            if (flagIcon && selectedOption.dataset.flag) {
+                flagIcon.src = selectedOption.dataset.flag;
+            }
         });
     }
     
@@ -267,7 +273,11 @@ function closeTrialModal() {
     if (trialCountryCode) {
         trialCountryCode.value = '+38';
         const codeSpan = document.querySelector('#trialModal .phone-code');
+        const flagIcon = document.getElementById('trialFlagIcon');
         if (codeSpan) codeSpan.textContent = '+38';
+        if (flagIcon) {
+            flagIcon.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+';
+        }
     }
     
     // Скидаємо тип модального вікна та заголовок
