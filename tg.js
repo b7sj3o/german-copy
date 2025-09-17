@@ -217,6 +217,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Оновлення видимого телефонного коду при зміні країни
+    const trialCountryCode = document.getElementById('trialCountryCode');
+    if (trialCountryCode) {
+        trialCountryCode.addEventListener('change', function() {
+            const codeSpan = document.querySelector('#trialModal .phone-code');
+            if (codeSpan) codeSpan.textContent = this.value;
+        });
+    }
+    
     // Додаємо обробник для trial форми
     const trialForm = document.getElementById('trialForm');
     if (trialForm) {
@@ -254,6 +263,12 @@ function closeTrialModal() {
     document.getElementById('trialName').value = '';
     document.getElementById('trialEmail').value = '';
     document.getElementById('trialPhone').value = '';
+    const trialCountryCode = document.getElementById('trialCountryCode');
+    if (trialCountryCode) {
+        trialCountryCode.value = '+38';
+        const codeSpan = document.querySelector('#trialModal .phone-code');
+        if (codeSpan) codeSpan.textContent = '+38';
+    }
     
     // Скидаємо тип модального вікна та заголовок
     modal.removeAttribute('data-type');
@@ -276,6 +291,9 @@ async function handleTrialFormSubmit(event) {
     const name = document.getElementById('trialName').value.trim();
     const email = document.getElementById('trialEmail').value.trim();
     const phone = document.getElementById('trialPhone').value.trim();
+    const selectedCode = (document.getElementById('trialCountryCode') && document.getElementById('trialCountryCode').value) || '+38';
+    const digitsOnly = phone.replace(/\D/g, '');
+    const phoneWithCode = `${selectedCode} ${digitsOnly}`;
     
     // Валідація
     if (!name || !email || !phone) {
@@ -288,7 +306,7 @@ async function handleTrialFormSubmit(event) {
         return;
     }
     
-    if (phone.length < 10) {
+    if (digitsOnly.length < 6) {
         showTrialError('Будь ласка, введіть коректний номер телефону');
         return;
     }
@@ -307,13 +325,13 @@ async function handleTrialFormSubmit(event) {
         let result;
         if (modalType === 'teacher') {
             // Відправляємо заявку викладача
-            result = await sendTeacherApplicationToTelegram(name, email, phone);
+            result = await sendTeacherApplicationToTelegram(name, email, phoneWithCode);
             if (result.success) {
                 showTrialSuccess('Дякуємо! Ваша заявка на посаду викладача надіслана. Ми зв\'яжемося з вами найближчим часом.');
             }
         } else {
             // Відправляємо заявку на пробний урок
-            result = await sendTrialToTelegram(name, email, phone);
+            result = await sendTrialToTelegram(name, email, phoneWithCode);
             if (result.success) {
                 showTrialSuccess('Дякуємо! Ваша заявка надіслана. Ми зв\'яжемося з вами найближчим часом.');
             }
