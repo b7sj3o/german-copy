@@ -232,6 +232,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Обробка всіх інших country-select елементів
+    const countrySelects = document.querySelectorAll('.country-select');
+    countrySelects.forEach(function(select) {
+        select.addEventListener('change', function() {
+            const phoneGroup = this.closest('.phone-group');
+            if (phoneGroup) {
+                const codeSpan = phoneGroup.querySelector('.phone-code');
+                const flagIcon = phoneGroup.querySelector('.flag-icon');
+                const selectedOption = this.options[this.selectedIndex];
+                
+                if (codeSpan) codeSpan.textContent = this.value;
+                if (flagIcon && selectedOption.dataset.flag) {
+                    flagIcon.src = selectedOption.dataset.flag;
+                }
+            }
+        });
+    });
+    
     // Додаємо обробник для trial форми
     const trialForm = document.getElementById('trialForm');
     if (trialForm) {
@@ -239,6 +257,60 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     console.log('Telegram integration initialized');
+    
+    // Закриття мобільного меню при кліку на посилання
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            // Закриваємо мобільне меню якщо воно відкрите
+            const mobileMenu = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            
+            if (mobileMenu && mobileMenu.classList.contains('show')) {
+                mobileMenu.classList.remove('show');
+            }
+            
+            if (navbarToggler && navbarToggler.getAttribute('aria-expanded') === 'true') {
+                navbarToggler.setAttribute('aria-expanded', 'false');
+                navbarToggler.classList.add('collapsed');
+            }
+            
+            // Альтернативні методи для різних типів мобільних меню
+            if (window.innerWidth <= 768) {
+                // WordPress/custom меню
+                const wpMobileMenu = document.querySelector('#main-nav');
+                const mobileNavContainer = document.querySelector('.menu-main-ua-container');
+                
+                if (wpMobileMenu) {
+                    const parentLi = this.closest('li');
+                    if (parentLi) {
+                        parentLi.classList.remove('active');
+                    }
+                    
+                    // Закриваємо меню через невеликий delay для плавності
+                    setTimeout(function() {
+                        if (wpMobileMenu.style.display === 'block' || wpMobileMenu.classList.contains('active')) {
+                            wpMobileMenu.style.display = 'none';
+                            wpMobileMenu.classList.remove('active');
+                        }
+                        if (mobileNavContainer && (mobileNavContainer.style.display === 'block' || mobileNavContainer.classList.contains('active'))) {
+                            mobileNavContainer.style.display = 'none';
+                            mobileNavContainer.classList.remove('active');
+                        }
+                    }, 100);
+                }
+                
+                // Загальний підхід - приховуємо всі можливі мобільні меню
+                const possibleMenus = document.querySelectorAll('.mobile-menu, .nav-mobile, .navbar-nav, .main-navigation');
+                possibleMenus.forEach(function(menu) {
+                    if (menu.classList.contains('show') || menu.classList.contains('active')) {
+                        menu.classList.remove('show', 'active');
+                        menu.style.display = 'none';
+                    }
+                });
+            }
+        });
+    });
 });
 
 // Trial Modal Functions

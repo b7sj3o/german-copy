@@ -880,7 +880,22 @@
     outline: none;
 }
 
-#trialCountryCode.trial-select:focus {
+#trialCountryCode.trial-select:focus,
+.country-select:focus {
+    outline: none;
+}
+
+.country-select {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+    border: none;
+    background: transparent;
     outline: none;
 }
 

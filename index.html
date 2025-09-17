@@ -595,17 +595,28 @@
                         aria-expanded="false" class="nav-link">Наші
                         курси</a>
                     </li>
-                    <!-- <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
-                      id="menu-item-4286"
-                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-4286 nav-item">
-                      <a title="Ціни" href="#" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" class="dropdown-toggle nav-link">Ціни</a><span class="nav-toggle"></span>
-                    </li> -->
+                    
+                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
+                      class="menu-item-type-custom menu-item-object-custom nav-item">
+                      <a title="Наші викладачі" href="#teachers" class="nav-link">Наші викладачі</a>
+                    </li>
+                    
+                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
+                      class="menu-item-type-custom menu-item-object-custom nav-item">
+                      <a title="Групи" href="#groupStart" class="nav-link">Групи</a>
+                    </li>
+                    
+                    <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
+                      class="menu-item-type-custom menu-item-object-custom nav-item">
+                      <a title="Пробний урок" href="#trial" class="nav-link">Пробний урок</a>
+                    </li>
                     
                     <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                       id="menu-item-3503"
                       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3503 nav-item"><a
                         title="Контакти" href="#footer" class="nav-link">Контакти</a></li>
+
+                        
                   </ul>
                 </div>
               </nav>
@@ -1413,7 +1424,7 @@
 
 
       </section>
-      <section class="section section--inside gradient-3">
+      <section id="teachers" class="section section--inside gradient-3">
         <div class="container">
           <div class="section__meta">
             <p class="title">Наші викладачі</p>
@@ -1861,7 +1872,7 @@
 
 
       </section>
-      <section class="section section--trial">
+      <section id="trial" class="section section--trial">
         <div class="trial-dekor"></div>
         <div class="container">
           <div class="offer offer--trial gradient-1">
@@ -2621,6 +2632,7 @@
           <div class="phone-flag">
             <img id="trialFlagIcon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" alt="UA" class="flag-icon">
             <span class="phone-code">+38</span>
+         
           </div>
           <select id="trialCountryCode" class="trial-select">
             <option value="+38" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" selected>🇺🇦 +38</option>
@@ -2708,11 +2720,20 @@
                     </p>
                   </div>
                   <div class="field-form field--tel">
-                    <p><span class="wpcf7-form-control-wrap" data-name="tel-100"><input size="40" maxlength="400"
-                          minlength="12"
-                          class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel phone-input"
-                          aria-required="true" aria-invalid="false" value="" type="tel" name="tel-100" /></span>
-                    </p>
+                    <div class="phone-group">
+                      <div class="phone-flag">
+                        <img class="flag-icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" alt="UA">
+                        <span class="phone-code">+38</span>
+                      </div>
+                      <select class="country-select">
+                        <option value="+38" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" selected>🇺🇦 +38</option>
+                        <option value="+43" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNFRDJCMzMiLz4KPHJlY3QgeT0iNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjRUQyQjMzIi8+PC9zdmc+">🇦🇹 +43</option>
+                        <option value="+49" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiMwMDAwMDAiLz4KPHJlY3QgeT0iNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNERDAwM0MiLz4KPHJlY3QgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjRkZDRTAwIi8+PC9zdmc+">🇩🇪 +49</option>
+                        <option value="+31" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNBRTFDMjgiLz4KPHJlY3QgeT0iNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjMjE0Njg1Ci8+PC9zdmc+">🇳🇱 +31</option>
+                        <option value="+48" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNEQzE0M0MiLz4KPC9zdmc+">🇵🇱 +48</option>
+                      </select>
+                      <input size="40" maxlength="400" minlength="12" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel phone-input" aria-required="true" aria-invalid="false" value="" type="tel" name="tel-100" />
+                    </div>
                   </div>
                   <div class="form__info2">
                     <p>Який проміжок часу підійде для пробного уроку:
@@ -2813,11 +2834,21 @@
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
                         aria-invalid="false" placeholder="Ваше прізвище та ім’я" value="" type="text"
                         name="text-name-th" /></span><br />
-                    <span class="wpcf7-form-control-wrap" data-name="tel-10071"><input size="40" maxlength="400"
-                        minlength="10"
-                        class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel phone-input"
-                        aria-required="true" aria-invalid="false" value="" type="tel" name="tel-10071" /></span>
                   </p>
+                  <div class="phone-group">
+                    <div class="phone-flag">
+                      <img class="flag-icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" alt="UA">
+                      <span class="phone-code">+38</span>
+                    </div>
+                    <select class="country-select">
+                      <option value="+38" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" selected>🇺🇦 +38</option>
+                      <option value="+43" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNFRDJCMzMiLz4KPHJlY3QgeT0iNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjRUQyQjMzIi8+PC9zdmc+">🇦🇹 +43</option>
+                      <option value="+49" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiMwMDAwMDAiLz4KPHJlY3QgeT0iNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNERDAwM0MiLz4KPHJlY3QgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjRkZDRTAwIi8+PC9zdmc+">🇩🇪 +49</option>
+                      <option value="+31" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNBRTFDMjgiLz4KPHJlY3QgeT0iNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjMjE0Njg1Ci8+PC9zdmc+">🇳🇱 +31</option>
+                      <option value="+48" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNEQzE0M0MiLz4KPC9zdmc+">🇵🇱 +48</option>
+                    </select>
+                    <input size="40" maxlength="400" minlength="10" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel phone-input" aria-required="true" aria-invalid="false" value="" type="tel" name="tel-10071" />
+                  </div>
                   <div class="teach__field">
                     <p><span class="wpcf7-form-control-wrap" data-name="email-138"><input size="40" maxlength="400"
                           class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email"
@@ -2946,10 +2977,21 @@
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
                         aria-invalid="false" placeholder="Ім’я" value="" type="text"
                         name="text-name-0102" /></span><br />
-                    <span class="wpcf7-form-control-wrap" data-name="tel-100-0102"><input size="40" maxlength="400"
-                        class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel phone-input"
-                        aria-required="true" aria-invalid="false" value="" type="tel" name="tel-100-0102" /></span>
                   </p>
+                  <div class="phone-group">
+                    <div class="phone-flag">
+                      <img class="flag-icon" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" alt="UA">
+                      <span class="phone-code">+38</span>
+                    </div>
+                    <select class="country-select">
+                      <option value="+38" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiMwMDU3QjciLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" selected>🇺🇦 +38</option>
+                      <option value="+43" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNFRDJCMzMiLz4KPHJlY3QgeT0iNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjRUQyQjMzIi8+PC9zdmc+">🇦🇹 +43</option>
+                      <option value="+49" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiMwMDAwMDAiLz4KPHJlY3QgeT0iNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNERDAwM0MiLz4KPHJlY3QgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjRkZDRTAwIi8+PC9zdmc+">🇩🇪 +49</option>
+                      <option value="+31" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNBRTFDMjgiLz4KPHJlY3QgeT0iNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSI2IiBmaWxsPSIjMjE0Njg1Ci8+PC9zdmc+">🇳🇱 +31</option>
+                      <option value="+48" data-flag="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeT0iOSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjkiIGZpbGw9IiNEQzE0M0MiLz4KPC9zdmc+">🇵🇱 +48</option>
+                    </select>
+                    <input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel phone-input" aria-required="true" aria-invalid="false" value="" type="tel" name="tel-100-0102" />
+                  </div>
                   <div class="form-check">
                     <p class="form-check__title">Оберіть зручний спосіб звʼязку
                     </p>
@@ -2973,7 +3015,7 @@
                 <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="utm_content" />
                 <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="utm_term" />
                 <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="gclid" />
-                <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="first_utm_source" />
+                <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" trial-selectname="first_utm_source" />
                 <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="first_utm_medium" />
                 <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="first_utm_campaign" />
                 <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="first_utm_content" />
