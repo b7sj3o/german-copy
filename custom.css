@@ -75,7 +75,7 @@
     }
 }
 
-.school__editor li::before {
+.school__editor li::before{
     content: '';
     display: block;
     width: 19px;
@@ -87,6 +87,21 @@
     filter: hue-rotate(220deg) saturate(1.2) brightness(0.8);
     background-size: contain;
 }
+
+#main-nav > ul > li > a:before {
+    content: '';
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url("https://aura-school.com/wp-content/themes/wp-bootstrap-starter-master/img/star.svg") no-repeat center;
+    filter: hue-rotate(220deg) saturate(1.2) brightness(0.8);
+    background-size: contain;
+    min-width: 19px;
+    margin-right: 6px;
+    position: relative;
+    top: 0px;
+}
+
 
 .newbox .item {
     background: #eaecec !important;
